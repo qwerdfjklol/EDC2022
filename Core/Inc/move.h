@@ -68,6 +68,8 @@ void WheelPidCalculate();
 //基本移动函数，分别控制前后、左右、旋转分量来控制移动
 void MoveBasic(float onPitchAxis, float onRollAxis, float rotateYawAxis);
 
+void SetStateInfo(float accx, float accy, float accz, float velox, float veloy, float veloz, float pitch, float yaw, float roll);
+
 //输入当前速度在X, Y上的分量来校准方位角，使得当小车朝向Y正方向移动时方位角为0，当小车朝向X正方向移动时方位角为90
 void YawCalibration(float x, float y);
 

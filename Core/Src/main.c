@@ -239,6 +239,7 @@ void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim){
     __HAL_TIM_SET_COUNTER(&htim5, 0);
     __HAL_TIM_SET_COUNTER(&htim8, 0);
 
+    SetStateInfo(jy62data.accx, jy62data.accy, jy62data.accz, jy62data.velox, jy62data.veloy, jy62data.veloz, jy62data.pitch, jy62data.yaw, jy62data.roll);
     YawPidCalculate();
     WheelPidCalculate();
 

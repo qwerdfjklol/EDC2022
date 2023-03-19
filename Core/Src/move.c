@@ -80,6 +80,19 @@ void MoveBasic(float onPitchAxis, float onRollAxis, float rotateYawAxis)
     SetRpm[3] = -(onRollAxis + onPitchAxis + RotateSpeedGain * rotateYawAxis);
 }
 
+void SetStateInfo(float accx, float accy, float accz, float velox, float veloy, float veloz, float pitch, float yaw, float roll)
+{
+    AxisData.accx = accx;
+    AxisData.accx = accy;
+    AxisData.accx = accz;
+    AxisData.velox = velox;
+    AxisData.veloy = veloy;
+    AxisData.veloz = veloz;
+    AxisData.pitch = pitch;
+    AxisData.yaw = yaw;
+    AxisData.roll = roll;
+}
+
 void YawCalibration(float vx, float vy)
 {
     YawDifference = atan2f(vx, vy) - AxisData.yaw;
